@@ -27,25 +27,25 @@ public class AnimalApp {
 		String[] names = args;
 		int x = 0;
 		
-		if (dbl == dbl2) {
-			System.out.println("THIS IS THE SAME");
-		} else {
-			System.out.println("THIS IS NOT THE SAME");
-		}
-		
 		// Foreach
 		for (String name : names) {
 			System.out.println("Hello " + name);
 			x = x + 1;
+			notifyOfRuns(x);
 		}
 		
 		System.out.println("This code run " + x + " times");
 		
+		notifyOfRuns(x);
+		
+	}
+	
+	public static void notifyOfRuns(int y) {
 		// If/else
-		if (x > 10) {
-			System.out.println("x > 10");
+		if (y > 5) {
+			System.out.println("y > 5");
 		} else {
-			System.out.println("x < 10");
+			System.out.println("y < 5");
 		}
 		
 	}
