@@ -1,6 +1,14 @@
 package dreamteam;
 
+import java.util.ArrayList;
+
 public class PersonPrinter {
+	
+	public void print(ArrayList<Person> persons) {
+		for (Person temp : persons) {
+			System.out.println("Hello " + temp.name + ", age " + temp.age);
+		}
+	}
 	
 	public void print(Person[] persons) {
 		int x = 0;

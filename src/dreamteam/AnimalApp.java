@@ -1,51 +1,49 @@
+// Perfect packaga name for us: com.accenture.jumpstart.dreamteam
 package dreamteam;
+
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AnimalApp {
 
-	// This is the starting method:
+	
 	public static void main(String[] args) {
-	/*
-		String name = "Christian";
-		String name2 = "Florian";
-		String name3 = "Minh";
-		String name4 = "Tanja";
-		String name5 = "Deeksha";
+		ArrayList<Person> people = new ArrayList<>();
 		
-		System.out.println("Hello " + name);
-		System.out.println("Hello " + name2);
-		System.out.println("Hello " + name3);
-		System.out.println("Hello " + name4);
-		System.out.println("Hello " + name5);
-	*/	
-		String[] names = new String[] { 
-				"Christian", "Florian", "Minh", "Tanja", "Deeksha" };	
-		
-		for (String name : names) {
-			System.out.println("Hello " + name);
+		Scanner scanner = new Scanner(System.in);
+		// 15:30
+		while (true) {
+			System.out.println("Hello, what do you want to do?");
+			String commando = scanner.nextLine();
+
+			// if / else = Control Statement
+			if (commando.equals("show")) {
+				PersonPrinter personPrinter = new PersonPrinter();
+				personPrinter.print(people);			
+			} else if (commando.equals("add")) {
+				System.out.println("What is the name of the person?");
+				String personName = scanner.nextLine();
+
+				System.out.println("What is the age of the person?");
+				String personAge = scanner.nextLine();
+				
+				Person p = new Person();
+				p.name = personName;
+				p.age = Integer.parseInt(personAge);
+				
+				people.add(p);
+			} else if (commando.equals("exit")) {
+				System.out.println("goodbye");
+				System.exit(0);
+			} else if (commando.equals("show-fake")) {
+				PersonCreator personCreator = new PersonCreator();
+				Person[] persons = personCreator.create();
+				PersonPrinter personPrinter = new PersonPrinter();
+				personPrinter.print(persons);
+			} else {
+				System.out.println("I don't know what you are asking me.");
+			}
 		}
 		
-		PersonCreator personCreator = new PersonCreator();
-		Person[] persons = personCreator.create();
-		
-		PersonPrinter personPrinter = new PersonPrinter();
-		personPrinter.print(persons);
-		
-		
-		// more modern version of looping
-		/*
-		for (Person temp : persons) {
-			System.out.println("Hello " + temp.name + ", age " + temp.age);
-		}
-		*/
-		
-		// Oldschool but also possible:
-		/*
-		for (int i = 0; i < persons.length; i++) {
-			System.out.println("Hello " + persons[i].name + ", age " + persons[i].age);
-			i++;
-		}
-		*/
 	}
-	
-	
 }
