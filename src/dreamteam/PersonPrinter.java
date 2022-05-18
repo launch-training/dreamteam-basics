@@ -6,7 +6,7 @@ public class PersonPrinter {
 	
 	public void print(ArrayList<Person> persons) {
 		for (Person temp : persons) {
-			System.out.println("Hello " + temp.name + ", age " + temp.age);
+			temp.printInformation();
 		}
 	}
 	
@@ -14,7 +14,7 @@ public class PersonPrinter {
 		int x = 0;
 		// more modern version of looping
 		for (Person temp : persons) {
-			System.out.println("Hello " + temp.name + ", age " + temp.age);
+			temp.printInformation();
 			x++;
 		}
 		

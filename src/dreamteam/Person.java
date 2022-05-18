@@ -6,4 +6,7 @@ public class Person {
 	public int age;
 	public String hairColor;
 	
+	public void printInformation() {
+		System.out.println("Hello " + name + ", age " + age);
+	}
 }
