@@ -13,12 +13,12 @@ public class RemoveCocktailCommando {
 		Cocktail cocktailToRemove = null;
 		
 		for (Cocktail cocktail : cocktails) {
-			if (cocktail.name.startsWith(cocktailname)) {
+			if (cocktail.name.equals(cocktailname)) {
 				cocktailToRemove = cocktail;
 				break;
 			}
 		}
-		
+
 		if (cocktailToRemove != null) {
 			cocktails.remove(cocktailToRemove);
 		}
