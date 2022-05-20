@@ -15,8 +15,7 @@ public class AnimalApp {
 	
 	public static void main(String[] args) {
 		
-		Trainee t1 = new Trainee();
-		Person p2 = new Trainee();
+	
 		
 		
 		ShowPeopleCommando showPeopleCommando = new ShowPeopleCommando();
