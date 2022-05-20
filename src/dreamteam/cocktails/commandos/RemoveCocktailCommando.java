@@ -13,7 +13,7 @@ public class RemoveCocktailCommando {
 		Cocktail cocktailToRemove = null;
 		
 		for (Cocktail cocktail : cocktails) {
-			if (cocktail.name.equals(cocktailname)) {
+			if (cocktail.name.equalsIgnoreCase(cocktailname)) {
 				cocktailToRemove = cocktail;
 				break;
 			}
